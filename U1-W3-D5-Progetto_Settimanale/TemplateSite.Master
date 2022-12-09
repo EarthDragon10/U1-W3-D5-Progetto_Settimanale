@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplateSite.Master.cs" Inherits="U1_W3_D5_Progetto_Settimanale.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <%-- HEADER--%>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <div class="w-100"><asp:Image ImageUrl="~\Img\15-1.jpg" CssClass="w-100" runat="server" /></div>
+                    
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+            </header>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%--Footer--%>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <asp:Image ImageUrl="~\Img\15-1.jpg" runat="server" />
+                    </a>
+                    <span class="text-muted">© 2021 Company, Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use></svg></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use></svg></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
