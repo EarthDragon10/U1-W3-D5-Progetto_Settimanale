@@ -53,5 +53,11 @@ namespace U1_W3_D5_Progetto_Settimanale
                 return products;
             }
         }
+
+        protected void DetailProduct_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("");
+        }
     }
 }

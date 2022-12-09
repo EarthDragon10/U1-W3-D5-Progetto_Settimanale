@@ -16,7 +16,7 @@
                             <p>Model: <%#Item.Model %></p>
                             <p>Price: <%#Item.Price %></p>
                             <p class="card-text" id="descProduct">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="DetailProduct.aspx?idproduct=<%#Item.IdProducts %>" id="detailProduct" class="btn btn-primary">Detail of product</a>
+                            <asp:Button Text="Detail of product" runat="server" href="DetailProduct.aspx?idproduct=<%#Item.IdProducts %>" OnClick="DetailProduct_Click" CssClass="btn btn-primary"/>                         
                         </div>
                     </div>
                 </ItemTemplate>
