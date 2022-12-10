@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace U1_W3_D5_Progetto_Settimanale
@@ -73,6 +74,7 @@ namespace U1_W3_D5_Progetto_Settimanale
                     if(item.IdProducts == Id)
                     {
                         Products.cartOfProducts.Add(item);
+                        Products.CartProductLength += 1;
                     }
                 }
             }
@@ -90,6 +92,7 @@ namespace U1_W3_D5_Progetto_Settimanale
                 {
                     Products newProducts = new Products { IdProducts = item.IdProducts, Name = item.Name, Model = item.Model, Price = item.Price, urlImage = item.urlImage };
                     Products.cartOfProducts.Add(newProducts);
+                    Products.CartProductLength += 1;
                 }
             }
         }

@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="row d-flex flex-wrap gap-5 justify-content-around align-content-center">
-            <div class="card d-flex p-2 card-product" style="width: 18rem;">
+            <div class="card shadow d-flex p-2 card-product" style="width: 18rem;">
                 <asp:Image ImageUrl="" runat="server" ID="imgProduct" CssClass="card-img-top" />
                 <div class="card-body">
                     <h3 class="card-title" runat="server" id="titleProduct"></h3>

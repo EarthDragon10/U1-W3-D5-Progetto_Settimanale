@@ -90,6 +90,7 @@
     <Content Include="Content\CSS\font-awesome.min.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Img\15-1.jpg" />
+    <Content Include="Img\Logo\logo.jpg" />
     <Content Include="Img\Products\adidas-Performance.jpg" />
     <Content Include="Img\Products\mondo_toys-champions.jpg" />
     <Content Include="Img\Products\nike-classic.jpg" />

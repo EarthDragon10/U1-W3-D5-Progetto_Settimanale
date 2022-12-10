@@ -16,6 +16,15 @@ namespace U1_W3_D5_Progetto_Settimanale
             {
                 Repeater_Cart.DataSource = Products.cartOfProducts;
                 Repeater_Cart.DataBind();
+
+                double totalCart = 0;
+
+                foreach (WebForm1.Products item in Products.cartOfProducts)
+                {
+                    totalCart += item.Price;
+                }
+
+                TotalCart.Text = "Tot: " + totalCart.ToString() + "$";
             }
             
         }
@@ -27,6 +36,9 @@ namespace U1_W3_D5_Progetto_Settimanale
 
             Repeater_Cart.DataSource = Products.cartOfProducts;
             Repeater_Cart.DataBind();
+
+            TotalCart.Text = "Tot: 0$";
+            Products.CartProductLength = 0;
         }
     }
 }

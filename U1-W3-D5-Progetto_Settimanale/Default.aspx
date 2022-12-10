@@ -10,7 +10,7 @@
         <div class="row d-flex flex-wrap gap-5 justify-content-around align-content-center">
             <asp:Repeater runat="server" ID="RepeaterProduct" ItemType="U1_W3_D5_Progetto_Settimanale.WebForm1.Products">
                 <ItemTemplate>
-                    <div class="card d-flex p-2 card-product" style="width: 18rem;">
+                    <div class="card shadow d-flex p-2 card-product" style="width: 18rem;">
                         <div><asp:Image ImageUrl="<%#Item.urlImage %>" runat="server" ID="imgProduct" CssClass="card-img-top" /></div>
                         <div class="card-body">
                             <h3 class="card-title" runat="server" id="titleProduct"><%#Item.Name %></h3>

@@ -47,6 +47,7 @@ namespace U1_W3_D5_Progetto_Settimanale
                     };
 
                     WebForm1.Products.cartOfProducts.Add(newProduct);
+                    WebForm1.Products.CartProductLength += 1;
                 }
             }
         }

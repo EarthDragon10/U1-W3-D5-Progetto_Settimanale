@@ -24,6 +24,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-         <asp:Button Text="Svuota carrello"  OnClick="Clear_Click" runat="server" CssClass="btn btn-primary " PostBackUrl="~/Carrello.aspx" />
+        <asp:Label Text="Tot:" CssClass="fw-bold" runat="server" ID="TotalCart" />
+         <asp:Button Text="Svuota carrello" OnClick="Clear_Click" runat="server" CssClass="btn btn-primary " PostBackUrl="~/Carrello.aspx" />
     </div>
 </asp:Content>
