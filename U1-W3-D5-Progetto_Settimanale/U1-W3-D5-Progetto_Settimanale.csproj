@@ -104,6 +104,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Style.css" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="StyleSheet2.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="Carrello.aspx" />
