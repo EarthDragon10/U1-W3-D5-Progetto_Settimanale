@@ -11,8 +11,10 @@ namespace U1_W3_D5_Progetto_Settimanale
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RepeaterProduct.DataSource = Products.GetProducts();
-            RepeaterProduct.DataBind();
+            if (!IsPostBack) {
+                RepeaterProduct.DataSource = Products.GetProducts();
+                RepeaterProduct.DataBind();
+            }   
         }
 
         public class Products
@@ -28,7 +30,7 @@ namespace U1_W3_D5_Progetto_Settimanale
 
             public static List<Products> products = new List<Products>();
 
-            public static List<Products> cardOfProducts = new List<Products>();
+            public static List<Products> cartOfProducts = new List<Products>();
 
             public static List<Products> GetProducts() {
                 List<Products> products = new List<Products>();
@@ -68,7 +70,7 @@ namespace U1_W3_D5_Progetto_Settimanale
                 {
                     if(item.IdProducts == Id)
                     {
-                        Products.cardOfProducts.Add(item);
+                        Products.cartOfProducts.Add(item);
                     }
                 }
             }
@@ -78,13 +80,14 @@ namespace U1_W3_D5_Progetto_Settimanale
         {
             Button btn = (Button)sender;
 
-            Int32 IdProducts = Convert.ToInt32(btn.CommandArgument);
+            int IdProducts = Convert.ToInt32(btn.CommandArgument);
 
             foreach (Products item in Products.GetProducts())
             {
                 if (item.IdProducts == IdProducts)
                 {
-                    Products.cardOfProducts.Add(item);
+                    Products newProducts = new Products { Name = item.Name, Model = item.Model, Price = item.Price, urlImage = item.urlImage };
+                    Products.cardOfProducts.Add(newProducts);
                 }
             }
         }

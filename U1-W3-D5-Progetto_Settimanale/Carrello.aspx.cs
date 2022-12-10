@@ -12,8 +12,23 @@ namespace U1_W3_D5_Progetto_Settimanale
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Repeater_Cart.DataSource = Products.cardOfProducts; 
-            Repeater_Cart.DataBind();
+            if (!IsPostBack)
+            {
+                //List<Products> p = new List<Products>();
+
+                //p = Products.cartOfProducts;
+
+               // Repeater_Cart.DataSource = p;
+                Repeater_Cart.DataSource = Products.cartOfProducts;
+                Repeater_Cart.DataBind();
+            }
+            
+        }
+
+        protected void Clear_Click(object sender, EventArgs e)
+        {
+           
+            Products.cartOfProducts.Clear();
         }
     }
 }
