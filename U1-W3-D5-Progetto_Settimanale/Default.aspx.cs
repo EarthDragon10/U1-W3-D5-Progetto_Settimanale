@@ -28,6 +28,8 @@ namespace U1_W3_D5_Progetto_Settimanale
 
             public static List<Products> products = new List<Products>();
 
+            public static List<Products> cardOfProducts = new List<Products>();
+
             public static List<Products> GetProducts() {
                 List<Products> products = new List<Products>();
 
@@ -52,12 +54,39 @@ namespace U1_W3_D5_Progetto_Settimanale
 
                 return products;
             }
+        
         }
 
-        protected void DetailProduct_Click(object sender, EventArgs e)
+        protected void RepeaterProduct_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            
+            if(e.CommandName == "IdProduct")
+            {
+                Int32 Id = Convert.ToInt32(e.CommandArgument.ToString());
 
-            Response.Redirect("");
+                foreach (Products item in Products.GetProducts())
+                {
+                    if(item.IdProducts == Id)
+                    {
+                        Products.cardOfProducts.Add(item);
+                    }
+                }
+            }
+        }
+
+        protected void Unnamed_Click1(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            Int32 IdProducts = Convert.ToInt32(btn.CommandArgument);
+
+            foreach (Products item in Products.GetProducts())
+            {
+                if (item.IdProducts == IdProducts)
+                {
+                    Products.cardOfProducts.Add(item);
+                }
+            }
         }
     }
 }

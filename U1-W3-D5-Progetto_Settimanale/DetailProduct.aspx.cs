@@ -12,6 +12,18 @@ namespace U1_W3_D5_Progetto_Settimanale
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            string IdProduct = Request.QueryString["idproduct"];
+
+            foreach (WebForm1.Products item in WebForm1.Products.GetProducts())
+            {
+                if (item.IdProducts.ToString() == IdProduct)
+                {
+                    titleProduct.InnerHtml = item.Name;
+                    txtModel.InnerHtml = $"Model: {item.Model}";
+                    txtPrice.InnerHtml = $"Price: {item.Price}";
+                    imgProduct.ImageUrl = item.urlImage;
+                }
+            }
         }
     }
 }

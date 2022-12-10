@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplateSite.Master.cs" Inherits="U1_W3_D5_Progetto_Settimanale.Site1" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -8,6 +7,7 @@
     <title></title>
     <script src="https://kit.fontawesome.com/7b501ddc7c.js" crossorigin="anonymous"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

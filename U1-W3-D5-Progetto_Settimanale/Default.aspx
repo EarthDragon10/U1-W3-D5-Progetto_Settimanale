@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TemplateSite.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="U1_W3_D5_Progetto_Settimanale.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TemplateSite.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="U1_W3_D5_Progetto_Settimanale.WebForm1"  %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>
@@ -16,7 +17,9 @@
                             <p>Model: <%#Item.Model %></p>
                             <p>Price: <%#Item.Price %></p>
                             <p class="card-text" id="descProduct">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <asp:Button Text="Detail of product" runat="server" href="DetailProduct.aspx?idproduct=<%#Item.IdProducts %>" OnClick="DetailProduct_Click" CssClass="btn btn-primary"/>                         
+                                               
+                            <a href="DetailProduct.aspx?idproduct=<%#Item.IdProducts %>">Detail of Product</a>
+                            <asp:Button Text="Aggiungi Carrello" CommandArgument="<%#Item.IdProducts %>" OnClick="Unnamed_Click1" runat="server" CssClass="btn btn-primary"/>
                         </div>
                     </div>
                 </ItemTemplate>
