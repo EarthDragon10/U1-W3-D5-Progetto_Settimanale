@@ -86,8 +86,8 @@ namespace U1_W3_D5_Progetto_Settimanale
             {
                 if (item.IdProducts == IdProducts)
                 {
-                    Products newProducts = new Products { Name = item.Name, Model = item.Model, Price = item.Price, urlImage = item.urlImage };
-                    Products.cardOfProducts.Add(newProducts);
+                    Products newProducts = new Products { IdProducts = item.IdProducts, Name = item.Name, Model = item.Model, Price = item.Price, urlImage = item.urlImage };
+                    Products.cartOfProducts.Add(newProducts);
                 }
             }
         }

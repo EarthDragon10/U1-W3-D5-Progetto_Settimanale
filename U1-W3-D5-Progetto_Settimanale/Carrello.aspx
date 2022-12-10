@@ -14,12 +14,13 @@
                             <p>Model: <%#Item.Model %></p>
                             <p>Price: <%#Item.Price %></p>
                             <p class="card-text" id="descProduct">Some quick example text to build on the card title and make up the bulk of the card's content.</p>   
-                            <asp:Button Text="Svuota carrello"  OnClick="Clear_Click" runat="server" CssClass="btn btn-primary" />
+                           
                       
                         </div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
         </div>
+         <asp:Button Text="Svuota carrello"  OnClick="Clear_Click" runat="server" CssClass="btn btn-primary" PostBackUrl="~/Carrello.aspx" />
     </div>
 </asp:Content>
