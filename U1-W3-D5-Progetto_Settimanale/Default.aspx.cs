@@ -32,6 +32,8 @@ namespace U1_W3_D5_Progetto_Settimanale
 
             public static List<Products> cartOfProducts = new List<Products>();
 
+            public static int CartProductLength = 0;
+
             public static List<Products> GetProducts() {
                 List<Products> products = new List<Products>();
 

@@ -1,0 +1,16 @@
+﻿body {
+}
+
+.card-product {
+    font-size: 1.4rem;
+    justify-content: space-between;
+}
+
+.txtItalic {
+    font-style: italic;
+}
+
+.txt-price {
+    color: red;
+}
+

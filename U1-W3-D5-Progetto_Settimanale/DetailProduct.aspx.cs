@@ -22,6 +22,31 @@ namespace U1_W3_D5_Progetto_Settimanale
                     txtModel.InnerHtml = $"Model: {item.Model}";
                     txtPrice.InnerHtml = $"Price: {item.Price}";
                     imgProduct.ImageUrl = item.urlImage;
+                    btnAddCart.CommandArgument = item.IdProducts.ToString();
+                }
+            }
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+           Button btn = (Button)sender;
+
+            int productSelected = Convert.ToInt32(btn.CommandArgument);
+
+            foreach (WebForm1.Products item in WebForm1.Products.GetProducts())
+            {
+                if(item.IdProducts == productSelected)
+                {
+                    WebForm1.Products newProduct = new WebForm1.Products
+                    {
+                        IdProducts = item.IdProducts,
+                        Name = item.Name,
+                        Model= item.Model,
+                        Price = item.Price,
+                        urlImage= item.urlImage
+                    };
+
+                    WebForm1.Products.cartOfProducts.Add(newProduct);
                 }
             }
         }
