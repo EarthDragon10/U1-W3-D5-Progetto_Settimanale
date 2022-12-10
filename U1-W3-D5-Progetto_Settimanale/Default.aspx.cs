@@ -64,7 +64,7 @@ namespace U1_W3_D5_Progetto_Settimanale
             
             if(e.CommandName == "IdProduct")
             {
-                Int32 Id = Convert.ToInt32(e.CommandArgument.ToString());
+                int Id = Convert.ToInt32(e.CommandArgument.ToString());
 
                 foreach (Products item in Products.GetProducts())
                 {

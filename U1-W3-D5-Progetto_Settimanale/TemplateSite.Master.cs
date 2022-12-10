@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
 
 namespace U1_W3_D5_Progetto_Settimanale
 {
@@ -11,7 +12,17 @@ namespace U1_W3_D5_Progetto_Settimanale
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+     
+                if (WebForm1.Products.cartOfProducts.Count > 0)
+                {
+                    CartNotifications.CssClass = "d-flex";
+                    CartNotifications.Text = WebForm1.Products.cartOfProducts.Count.ToString();
+                }
+                else
+                {
+                    CartNotifications.CssClass = "d-none";
+                }
+            
         }
     }
 }

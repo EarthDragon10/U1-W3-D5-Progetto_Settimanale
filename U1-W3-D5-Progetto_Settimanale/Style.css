@@ -1,2 +1,11 @@
 ﻿body {
+
+}
+
+.cart-bradge {
+    display: flex;
+    align-items: flex-start;
+    text-align: start;
+    justify-content: center;
+}
 }
